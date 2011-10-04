@@ -1,0 +1,48 @@
+Name: upower
+Summary: Power Management Service
+Version: 0.9.5
+Release: 2
+Group: System/Libraries
+License: GPLv2+
+URL: http://upower.freedesktop.org/
+Sources:
+    - http://upower.freedesktop.org/releases/upower-%{version}.tar.bz2
+Patches:
+    - fix-energy-full-calculation-when-it-is-not-in-sysfs-data.patch
+Description: |
+    UPower (formerly DeviceKit-power) provides a daemon, API and command
+    line tools for managing power devices attached to the system.
+Requires:
+    - polkit >= 0.92
+    - udev
+    - pm-utils >= 1.2.2.1
+PkgConfigBR:
+    - sqlite3
+    - gudev-1.0
+    - libusb
+    - libusb-1.0
+    - dbus-1
+    - dbus-glib-1
+    - glib-2.0
+    - polkit-gobject-1
+PkgBR:
+    - libtool
+    - intltool
+    - gettext
+Provides:
+    - DeviceKit-power
+Obsoletes:
+    - DeviceKit-power < 1:0.9.0-2
+ConfigOptions:
+    - --disable-gtk-doc
+LocaleName: upower
+SubPackages:
+    - Name: devel
+      Summary: Headers and libraries for UPower
+      Group: Development/Libraries
+      Description: Headers and libraries for UPower.
+      Provides:
+          - DeviceKit-power-devel
+      Obsoletes:
+          - DeviceKit-power-devel < 1:0.9.0-2
+

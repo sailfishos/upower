@@ -1,0 +1,30 @@
+* Tue Sep 06 2011 Carsten Munk <carsten@maemo.org> - 0.9.5
+- Drop gtk-doc
+
+* Tue Jun 14 2011 Anas Nashif <anas.nashif@intel.com> - 0.9.5
+- Require gtk-doc for build
+
+* Wed Apr 20 2011 Mika Laitio <ext-mika.1.laitio@nokia.com> - 0.9.5
+- BMC#16455 fix with patch
+  fix-energy-full-calculation-when-it-is-not-in-sysfs-data.patch 
+  If the sysfs does not provide energy_full and energy_full_design
+  properties for the battery but provided only the energy property, try
+  to calculate the value by using voltage_now, charge_now and charge_full_now
+  sysfs entries. Without this patch energy_full was calculated to 0
+  and upower uses the highest energy value seen as a "full_energy" 
+  in it's calculations and that caused that the battery charge level was
+  calculated incorrectly until the battery was loaded once to full.
+
+* Wed Oct 27 2010 Anas Nashif <anas.nashif@intel.com> - 0.9.5
+- Remove dependency on gobject-introspection
+
+* Sat Sep 04 2010 Anas Nashif <nashif@linux.intel.com> - 0.9.5
+- Do not require gobject-introspection
+- Use a proper release, not a git snapshot
+
+* Thu Jul 08 2010 Yan Yin <yan.yin@intel.com> - 0.9.4
+- fix version numbering
+
+* Thu Jul 01 2010 Yan Yin <yan.yin@intel.com> - 0.9.4
+- import to deprecate Devicekit-power
+
