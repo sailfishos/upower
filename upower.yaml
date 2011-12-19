@@ -1,14 +1,12 @@
 Name: upower
 Summary: Power Management Service
-Version: 0.9.5
+Version: 0.9.15
 Release: 2
 Group: System/Libraries
 License: GPLv2+
 URL: http://upower.freedesktop.org/
 Sources:
-    - http://upower.freedesktop.org/releases/upower-%{version}.tar.bz2
-Patches:
-    - fix-energy-full-calculation-when-it-is-not-in-sysfs-data.patch
+    - http://upower.freedesktop.org/releases/upower-%{version}.tar.xz
 Description: |
     UPower (formerly DeviceKit-power) provides a daemon, API and command
     line tools for managing power devices attached to the system.
@@ -17,9 +15,7 @@ Requires:
     - udev
     - pm-utils >= 1.2.2.1
 PkgConfigBR:
-    - sqlite3
     - gudev-1.0
-    - libusb
     - libusb-1.0
     - dbus-1
     - dbus-glib-1

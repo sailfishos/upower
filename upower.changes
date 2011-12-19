@@ -1,3 +1,8 @@
+* Mon Dec 19 2011 Marko Saukko <marko.saukko@cybercom.com> - 0.9.15
+- Update to version 0.9.15
+- Dropped fix-energy-full-calculation-when-it-is-not-in-sysfs-data.patch 
+- Removed unused libusb and sqlite3 pkgconfig build deps.
+
 * Tue Sep 06 2011 Carsten Munk <carsten@maemo.org> - 0.9.5
 - Drop gtk-doc
 
