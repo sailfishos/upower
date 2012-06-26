@@ -1,3 +1,6 @@
+* Tue Jun 26 2012 Marko Saukko <sage@merproject.org> - 0.9.17
+- Fixes MER#367: update upower to 0.9.16
+
 * Mon Dec 19 2011 Marko Saukko <marko.saukko@cybercom.com> - 0.9.15
 - Update to version 0.9.15
 - Dropped fix-energy-full-calculation-when-it-is-not-in-sysfs-data.patch 
