@@ -1,3 +1,7 @@
+* Fri Aug 17 2012 Marko Saukko <marko.saukko@jollamobile.com> - 0.9.18
+- Update to version 0.9.18.
+- Added --enable-systemd option
+
 * Tue Jun 26 2012 Marko Saukko <sage@merproject.org> - 0.9.17
 - Fixes MER#367: update upower to 0.9.16
 

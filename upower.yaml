@@ -1,6 +1,6 @@
 Name: upower
 Summary: Power Management Service
-Version: 0.9.17
+Version: 0.9.18
 Release: 1
 Group: System/Libraries
 License: GPLv2+
@@ -21,25 +21,19 @@ PkgConfigBR:
     - dbus-glib-1 >= 0.76
     - glib-2.0 >= 2.21.5
     - gio-2.0 >= 2.16.1
-    - polkit-gobject-1 >= 0.91
+    - polkit-gobject-1 >= 0.97
 PkgBR:
     - libtool
     - intltool
     - gettext
-Provides:
-    - DeviceKit-power
-Obsoletes:
-    - DeviceKit-power < 1:0.9.0-2
+    - systemd-devel
 ConfigOptions:
     - --disable-gtk-doc
+    - --enable-systemd
 LocaleName: upower
 SubPackages:
     - Name: devel
       Summary: Headers and libraries for UPower
       Group: Development/Libraries
       Description: Headers and libraries for UPower.
-      Provides:
-          - DeviceKit-power-devel
-      Obsoletes:
-          - DeviceKit-power-devel < 1:0.9.0-2
 
