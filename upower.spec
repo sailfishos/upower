@@ -16,6 +16,7 @@ License:    GPLv2+
 URL:        http://upower.freedesktop.org/
 Source0:    http://upower.freedesktop.org/releases/upower-%{version}.tar.xz
 Source100:  upower.yaml
+Patch0:     notify-upower-dbus-send-path.patch
 Requires:   polkit >= 0.92
 Requires:   udev
 Requires:   pm-utils >= 1.2.2.1
@@ -50,6 +51,8 @@ Headers and libraries for UPower.
 %prep
 %setup -q -n %{name}-%{version}
 
+# notify-upower-dbus-send-path.patch
+%patch0 -p1
 # >> setup
 # << setup
 

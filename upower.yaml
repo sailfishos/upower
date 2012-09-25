@@ -7,6 +7,8 @@ License: GPLv2+
 URL: http://upower.freedesktop.org/
 Sources:
     - http://upower.freedesktop.org/releases/upower-%{version}.tar.xz
+Patches:
+    - notify-upower-dbus-send-path.patch
 Description: |
     UPower (formerly DeviceKit-power) provides a daemon, API and command
     line tools for managing power devices attached to the system.
