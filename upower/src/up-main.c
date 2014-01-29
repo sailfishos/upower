@@ -276,9 +276,9 @@ main (gint argc, gchar **argv)
 
 	g_debug ("Starting upowerd version %s", PACKAGE_VERSION);
 
-	qos = up_qos_new ();
 	/* no need to bother with keyboard backlight
 	   or wake-up tracking (especially since it only partly works on arm
+	qos = up_qos_new ();
 	kbd_backlight = up_kbd_backlight_new ();
 	wakeups = up_wakeups_new (); */
 	daemon = up_daemon_new ();
