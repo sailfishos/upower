@@ -50,7 +50,8 @@ export PKG_CONFIG=pkg-config
 ./autogen.sh
 %configure --disable-static \
     --disable-gtk-doc \
-    --enable-systemd
+    --enable-systemd \
+    --enable-history=no
 
 make %{?jobs:-j%jobs}
 

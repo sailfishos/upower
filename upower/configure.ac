@@ -27,6 +27,13 @@ AM_SILENT_RULES([yes])
 AM_CONDITIONAL(HAVE_INTROSPECTION, false)
 #GOBJECT_INTROSPECTION_CHECK([0.9.9])
 
+AC_ARG_ENABLE(history, [  --enable-history      enable history persistence],
+	      enable_history=$enableval,
+	      enable_history=yes)
+if test "${enable_history}" != no; then
+  AC_DEFINE(ENABLE_HISTORY, 1, [Define if history should be persistent])
+fi
+
 # use this in up-version.h
 UP_MAJOR_VERSION=up_major_version
 UP_MINOR_VERSION=up_minor_version
