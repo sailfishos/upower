@@ -12,7 +12,6 @@ URL:        http://upower.freedesktop.org/
 Source0:    http://upower.freedesktop.org/releases/upower-%{version}.tar.xz
 Requires:   polkit >= 0.92
 Requires:   udev
-Requires:   pm-utils >= 1.2.2.1
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 BuildRequires:  pkgconfig(gudev-1.0) >= 147
@@ -27,6 +26,11 @@ BuildRequires:  libtool
 BuildRequires:  intltool
 BuildRequires:  gettext
 BuildRequires:  systemd-devel
+
+# We want pm-utils to be removed from the images, this ensure
+# that the old version gets away as it is no longer needed for
+# upower after update to 0.9.20
+Obsoletes: pm-utils <= 1.4.1
 
 %description
 UPower (formerly DeviceKit-power) provides a daemon, API and command
@@ -49,8 +53,7 @@ Headers and libraries for UPower.
 export PKG_CONFIG=pkg-config
 ./autogen.sh
 %configure --disable-static \
-    --disable-gtk-doc \
-    --enable-systemd \
+    --enable-man-pages=no \
     --enable-history=no
 
 make %{?jobs:-j%jobs}
